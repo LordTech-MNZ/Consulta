@@ -27,8 +27,8 @@ app.post('/api/vote', voteLimiter, async (req, res) => {
     return res.status(400).json({ error: 'No se recibió el consentimiento requerido.' });
   }
 
-  const { GMAIL_USER, GMAIL_APP_PASSWORD, RECIPIENT_EMAIL } = process.env;
-  if (!GMAIL_USER || !GMAIL_APP_PASSWORD || !RECIPIENT_EMAIL) {
+  const { or456h@gmail.com, awkw_rlig_ictj_ptex, movimientonacionalzetario369@gmail.com } = process.env;
+  if (!or456h@gmail.com || !awkw_rlig_ictj_ptex || !movimientonacionalzetario369@gmail.com) {
     return res.status(503).json({ error: 'El servicio de correo aún no está configurado.' });
   }
 
@@ -42,8 +42,8 @@ app.post('/api/vote', voteLimiter, async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: GMAIL_USER,
-      to: RECIPIENT_EMAIL,
+      from: or456h@gmail.com,
+      to: movimientonacionalzetario369@gmail.com,
       subject: 'Nueva respuesta voluntaria de Zetaria',
       text: `Esta persona de ${ip} ha votado por el Reino Soberano de Zetaria como estado legítimo.\n\nLa dirección MAC no está disponible para esta aplicación web.`
     });
